@@ -1,0 +1,505 @@
+/**
+ * @file
+ * Positioning for a responsive layout.
+ *
+ * Define CSS classes to create a fluid grid layout with optional sidebars
+ * depending on whether blocks are placed in the left or right sidebars.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+// We are going to create a fluid grid with 1, 3, or 5 columns and 20px gutters
+// between columns (applied as 10px of left/right padding on each column).
+$zen-column-count:  1;
+$zen-gutter-width:  20px;
+
+// If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
+//$zen-box-sizing: content-box;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+// Suppress this section of CSS for RTL layouts since it contains no LTR-specific styles.
+@if $zen-reverse-all-floats == false {
+
+/**
+ * Center the page.
+ *
+ * For screen sizes larger than 1200px, prevent excessively long lines of text
+ * by setting a max-width.
+ */
+ .header_social {
+  float:right; 
+  }
+  
+#page,
+.region-bottom {
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.footercl{
+background-color:#D7D7D7;
+padding-top: 50px;
+margin-top: -17px;
+}
+.sidebar-first .footercl{
+	margin-top: -34px;
+}
+
+#header,
+#content,
+#footer, .footer_but {
+max-width: 900px;
+margin: 0 auto;
+width: 96%;
+}
+#tocont {
+max-width: 900px;
+margin: 0 auto;
+}
+/* Apply the shared properties of grid items in a single, efficient ruleset. */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  // See the note about $zen-auto-include-item-base above.
+  box-sizing: border-box;
+  word-wrap: normal;
+}
+
+/* Containers for grid items and flow items. */
+#header,
+#main,
+#footer {
+  @include zen-grid-container();
+}
+
+/* Navigation bar */
+@media all and (min-width: 600px) {
+  #main {
+    /* Move all the children of #main down to make room. */
+    padding-top: $nav-height;
+    position: relative;
+  }
+  
+  #navigation {
+    /* Move the navbar up inside #main's padding. */
+    position: absolute;
+    top: 0;
+    height: $nav-height;
+    width: $zen-grid-width;
+  }
+}
+
+} // End of @if $zen-reverse-all-floats == true
+
+@media screen and (max-width: 650px) {
+.footer_menu {
+    width: 100%;
+    text-align:center;
+}
+.inputclass{font-size:130%;} 
+.homediscuss_left{width: 100%;}
+.homediscuss_right{width: 100%;}
+.leftdis_top{width: 100%;}
+.rightdis_top{width: 100%; margin-top:10px;}
+.buttom_discuss{width: 96%;}
+/*.topcontent_reg{padding-right:16px;}*/
+/*#content{width: 94%;}*/
+.uitgelicht_out_img{ height:150px;}
+.uitgelicht_img{width: 100%; overflow: hidden;}
+.uitgelicht_img span.textspan{ width:60%; float:left;}
+.uitgelicht_out_img{width: 100%; float:inherit !important;}
+.interaction {
+    width: 100%;
+	}
+ 
+.homediscuss_left h2, .homediscuss_right h2{
+padding-left: 10px;
+}
+.allcontent{
+z-index: 1;
+position: relative;
+margin: 0 20px 50px 20px;
+padding-right: 10px;
+padding-left: 10px;
+}
+.art_title{
+-webkit-box-shadow: -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+-moz-box-shadow:    -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+box-shadow:         -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+margin: -30px -15px 0px -15px;
+padding: 10px 20px 0px 15px;
+background-color: white;
+}
+
+.head_title_2{
+color: #000000;
+padding-top: 10px;
+font-weight: 700;
+font-size: 26px; 
+}
+
+.pd5 {
+padding: 10px 20px 0px 20px;
+color: #555555;
+font-size: 0.67 * $base-font-size;
+}
+
+.pd5a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+}
+
+.pd6 {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+}
+
+.pd6a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 20px 0px 0px;
+}
+
+.pd6-img {
+ float: right; 
+}    
+        
+}
+
+/**
+ * Use 3 grid columns for smaller screens.
+ */
+@media all and (min-width: 650px) and (max-width: 900px) {
+.home_discuss_img {
+    width: 40%; 
+    border-left: 1px solid #909090;
+    padding-left: 30px;
+    }
+.uitgelicht_out_img{ height:100%;}
+.uitgelicht_img{ height:100%;}
+.home_discuss_body{
+width: 50%;
+}
+.inputclass{font-size: 130%;}
+.homediscuss_left h2, .homediscuss_right h2{
+padding-left: 10px;
+} 
+
+.allcontent{
+z-index: 1;
+position: relative;
+margin: 0 20px 50px 20px;
+padding-right: 10px;
+padding-left: 10px;
+}
+.art_title{
+-webkit-box-shadow: -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+-moz-box-shadow:    -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+box-shadow:         -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+margin: -30px -15px 0px -15px;
+padding: 10px 20px 0px 15px;
+background-color: white;
+}
+
+.head_title_2{
+color: #000000;
+padding-top: 10px;
+font-weight: 700;
+font-size: 26px; 
+}
+
+.uitgelicht_img span.textspan{ width:60%; float:left;}
+.uitgelicht_img{width: 98%; float:right; margin: 0 0 15px 5px !important;}
+.uitgelicht_out_img{width: 48.5%; float:right; margin: 0 0 5px 5px !important;}
+.interaction {
+    float: right;
+    margin: 0 0 5px 5px !important;
+    width: 98%;
+}
+.upper {visibility: hidden;}
+
+.pd5 {
+padding: 10px 20px 0px 20px;
+color: #555555;
+font-size: 0.67 * $base-font-size;
+}
+
+.pd5a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+position: relative;
+top: -30px;
+}
+
+.pd6 {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+}
+
+.pd6a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 0px;
+position: relative;
+top: -50px;
+}
+
+.pd6-img {
+ float: right; 
+ width: 50%;
+ }
+
+  $zen-column-count: 3;
+
+  /**
+   * The layout when there is only one sidebar, the left one.
+   */
+  .sidebar-first {
+    /* Span 2 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(2, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+  .sidebar-second {
+    /* Span 2 columns, starting in 1st column from left. */
+    #content {
+    float: left;
+    width: 96%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+    }
+
+    /* Span 1 column, starting in 3rd column from left. */
+    .region-sidebar-second {
+      @include zen-grid-item(1, 3);
+    }
+  }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+  .two-sidebars {
+    /* Span 2 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(2, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+
+    /* Start a new row and span all 3 columns. */
+    .region-sidebar-second {
+      @include zen-grid-item(3, 1);
+      @include zen-nested-container(); // Since we're making every block in this region be a grid item.
+      @include zen-clear();
+
+      /* Apply the shared properties of grid items in a single, efficient ruleset. */
+      .block {
+        @include zen-grid-item-base();
+      }
+      /* Span 1 column, starting in the 1st column from left. */
+      .block:nth-child(3n+1) {
+        @include zen-grid-item(1, 1);
+        @include zen-clear();
+      }
+      /* Span 1 column, starting in the 2nd column from left. */
+      .block:nth-child(3n+2) {
+        @include zen-grid-item(1, 2);
+      }
+      /* Span 1 column, starting in the 3rd column from left. */
+      .block:nth-child(3n) {
+        @include zen-grid-item(1, 3);
+      }
+    }
+  }
+}
+
+/**
+ * Use 5 grid columns for larger screens.
+ */
+@media all and (min-width: 900px) {
+.home_discuss_img {
+    width: 40%; 
+    border-left: 1px solid #909090;
+    padding-left: 30px;
+    }
+.uitgelicht_out_img{ height:250px;}
+.uitgelicht_img{ height:100%;}
+.home_discuss_body{
+width: 50%;
+}
+.inputclass{font-size: 130%;}
+.homediscuss_left h2 {
+padding-left: 8px;
+}
+.homediscuss_right h2{
+padding-left: 40px;
+}
+.allcontent{
+z-index: 1;
+position: relative;
+margin: 0 20px 50px 20px;
+padding-right: 10px;
+padding-left: 10px;
+}
+.art_title{
+-webkit-box-shadow: -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+-moz-box-shadow:    -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+box-shadow:         -2px -5px 6px 0px rgba(0, 0, 0, 0.36);
+margin: -30px -15px 0px -15px;
+padding: 10px 20px 0px 15px;
+background-color: white;
+}
+
+.head_title_2{
+color: #000000;
+padding-top: 10px;
+font-weight: 700;
+font-size: 26px; 
+}
+
+.uitgelicht_img span.textspan{ width:60%; float:left;}
+.uitgelicht_img{width: 95%; float:right; margin: 0 0 30px 20px !important;}
+.uitgelicht_out_img{width: 46%; float:right; margin: 0 0 20px 20px !important;}
+.interaction {
+    float: right;
+    margin: 0 0 20px 20px !important;
+    width: 94.6%;
+}
+.pd5 {
+padding: 10px 20px 0px 20px;
+color: #555555;
+font-size: 0.67 * $base-font-size;
+}
+
+.pd5a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+}
+
+.pd6 {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 20px;
+}
+
+.pd6a {
+color: #555555;
+font-size: 0.67 * $base-font-size;
+float: left;
+width: 40%;
+padding: 10px 0px 0px 0px;
+}
+
+.pd6-img {
+ float: right; 
+ width: 48%;
+}
+
+.sidebar-first #content {    
+    margin-top: 4%;   
+  }
+
+  $zen-column-count: 5;
+
+  /**
+   * The layout when there is only one sidebar, the left one.
+   */
+  .sidebar-first {
+    /* Span 4 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(4, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+  }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+   .sidebar-second #content article{
+		width:70%;
+		float: left;
+                border-right: 1px solid #909090;
+	}
+	.sidebar-second #content aside {
+    float: left;
+    width: 29%;
+}
+  .sidebar-second {
+    /* Span 4 columns, starting in 1st column from left. */
+    #content {
+      /*@include zen-grid-item(4, 1);*/
+    }
+	
+
+    /* Span 1 column, starting in 5th column from left. */
+    .region-sidebar-second {
+      /*@include zen-grid-item(1, 5);*/
+    }
+  }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+  .two-sidebars {
+    /* Span 3 columns, starting in 2nd column from left. */
+    #content {
+      @include zen-grid-item(3, 2);
+    }
+
+    /* Span 1 column, starting in 1st column from left. */
+    .region-sidebar-first {
+      @include zen-grid-item(1, 1);
+    }
+
+    /* Span 1 column, starting in 5th column from left. */
+    .region-sidebar-second {
+      @include zen-grid-item(1, 5);
+    }
+  }
+  
+}
+

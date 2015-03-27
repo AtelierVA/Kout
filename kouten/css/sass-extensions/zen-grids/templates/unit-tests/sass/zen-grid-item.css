@@ -1,0 +1,59 @@
+/*
+Error: File to import not found or unreadable: zen.
+       Load paths:
+         C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets
+         Compass::SpriteImporter
+        on line 6 of C:\Users\Carst\Documents\1314 KPWZ windmolen documentaire\website-definitief\Kout\BACKUP\kout-12jan\Kouten 3.2\sites\all\themes\kouten\sass-extensions\zen-grids\templates\unit-tests\sass\zen-grid-item.scss
+
+1: /**
+2:  * @file
+3:  * Test zen-grid-item()
+4:  *\/
+5: 
+6: @import "zen";
+7: 
+8: #test-zen-grid-item {
+9:   /* Test zen-grid-item(6, 4) with 12 column grid and 20px gutter *\/
+10:   $zen-column-count: 12;
+11:   @include zen-grid-item(6, 4);
+
+Backtrace:
+C:\Users\Carst\Documents\1314 KPWZ windmolen documentaire\website-definitief\Kout\BACKUP\kout-12jan\Kouten 3.2\sites\all\themes\kouten\sass-extensions\zen-grids\templates\unit-tests\sass\zen-grid-item.scss:6
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/import_node.rb:66:in `rescue in import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/import_node.rb:45:in `import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:407:in `run'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+C:/Ruby193/bin/sass:23:in `load'
+C:/Ruby193/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: zen.\A        Load paths:\A          C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.3/stylesheets\A          Compass::SpriteImporter\A         on line 6 of C:\Users\Carst\Documents\1314 KPWZ windmolen documentaire\website-definitief\Kout\BACKUP\kout-12jan\Kouten 3.2\sites\all\themes\kouten\sass-extensions\zen-grids\templates\unit-tests\sass\zen-grid-item.scss\A \A 1: /**\A 2:  * @file\A 3:  * Test zen-grid-item()\A 4:  */\A 5: \A 6: @import \"zen\";\A 7: \A 8: #test-zen-grid-item {\A 9:   /* Test zen-grid-item(6, 4) with 12 column grid and 20px gutter */\A 10:   $zen-column-count: 12;\A 11:   @include zen-grid-item(6, 4);"; }
